@@ -52,6 +52,15 @@ class complex
         friend complex operator+(const complex &first, const double real);
         // Adds real and complex number --> real+complex
         friend complex operator+(const double real, const complex &second);
+        
+        //=======Comparing complex numbers======//
+
+        // Overloading == operator
+        bool operator==(const complex&) const;;
+
+        // Overloading != operator
+        bool operator!=(const complex&) const;
+    
         // Destructor
         virtual ~complex();
 };
