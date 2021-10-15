@@ -30,5 +30,17 @@ int main()
     cout<<".....Addition of Mix cases......"<<endl;
     cout<<c1+5+c2+3+10+c1<<endl;
 
+    //=======Comparing complex numbers======//
+
+    // Overloading == operator
+    bool complex::operator==(const complex& other) const
+    {
+        return (real==other.real) && (imaginary==other.imaginary);
+    }
+
+    // Overloading != operator
+        bool complex::operator!=(const complex& other) const{
+        return !(*this == other);
+    }
     return 0;
 }
