@@ -101,7 +101,19 @@ complex operator+(const double real, const complex &second)
     c.setImaginary(second.getImaginary());
     return c;
 }
+    //=======Comparing complex numbers======//
 
+// Overloading == operator
+bool complex::operator==(const complex& other) const
+{
+    return (real==other.real) && (imaginary==other.imaginary);
+}
+
+// Overloading != operator
+    bool complex::operator!=(const complex& other) const{
+    return !(*this == other);
+}
+    
 //Destructor
 complex::~complex()
 {
